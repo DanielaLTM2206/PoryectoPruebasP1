@@ -1,0 +1,280 @@
+/* Estilos Generales para el Contenido */
+.main-content1 {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    margin-top: 70px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* Estilos del Formulario */
+form {
+    display: inline-block;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1000px; 
+    padding: 20px;
+    width: 100%; 
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+/* Estilos de los Campos de Entrada */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    border: none;
+    border-bottom: 2px solid #007BFF;
+    padding: 15px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box; 
+    background: transparent;
+}
+
+.form-group textarea {
+    border: 2px solid #007BFF; 
+    padding: 15px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    resize: vertical; 
+}
+
+/* Estilo del Label dentro del Input */
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    font-size: 16px;
+    color: #999;
+    transition: 0.3s;
+    pointer-events: none; 
+    transform: translateY(-50%);
+}
+
+/* Cuando el campo está enfocado o tiene contenido */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -1px;
+    left: 10px;
+    font-size: 12px;
+    color: #007BFF;
+    background: #fff;
+    padding: 0 5px;
+}
+
+/* Estilo para los Campos de Permisos */
+.permissions-fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+}
+
+.permissions-fieldset legend {
+    font-weight: bold;
+    padding: 0 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    grid-column: span 3;
+}
+
+.form-checkbox-row {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.form-checkbox-row input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form-checkbox-row label {
+    font-size: 14px;
+}
+
+/* Estilos para Botones */
+button {
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.centrar{
+	text-align: center;
+}
+
+button[type="submit"],
+button[type="button"],
+button[type="reset"]{
+    background-color: #007BFF;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="button"] {
+    background-color: #007BFF;
+}
+
+button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para los Botones del Mini Menú */
+.tab-button {
+    background: #333;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active {
+    background: #007BFF;
+}
+
+.tab-button:hover {
+    background: #0056b3;
+}
+
+
+/* Estilos Adicionales para la Fila del Formulario */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-row > div {
+    flex: 1;
+    min-width: calc(50% - 20px); 
+    box-sizing: border-box;
+}
+
+.fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+/* Estilo para la Lista de Productos Añadidos */
+.addedProductsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.addedProductsList li {
+    background: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addedProductsList button {
+    background: #dc3545;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.addedProductsList button:hover {
+    background: #c82333;
+}
+
+/* Estilos para el Contenedor de Mensajes Flotantes */
+#messageContainer {
+    position: fixed;
+    bottom: 10px;
+    left: 58%; 
+    transform: translateX(-50%); 
+    z-index: 1000;
+    width: auto; 
+    max-width: 500px; 
+}
+
+.message {
+    background-color: #333;
+    color: #fff;
+    padding: 15px; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.message.success {
+    background-color: green;
+}
+
+.message.error {
+    background-color: red;
+}
+
+
+/* Estilos para los Encabezados <h3> en Formularios */
+form h3 {
+    color: #007BFF; 
+    margin-bottom: 20px; 
+}
+
+.error input, .error select, .error textarea {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+
+

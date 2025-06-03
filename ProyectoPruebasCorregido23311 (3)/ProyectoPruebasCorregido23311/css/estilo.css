@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Asegúrate de tener la fuente Roboto incluida */
+    color: #333;
+}
+
+/* Login Styles */
+.login-body {
+    position: relative;
+    background-image: url("../img/Emp.png");
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 100vh; /* Asegúrate de que cubra toda la altura de la ventana */
+    overflow: hidden;
+}
+
+/* A cover para la imagen */
+.login-body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7); /* Blanquea con opacidad para hacer la imagen menos dominante */
+    z-index: -1; /* Asegúrate de que la capa no cubra el formulario */
+}
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px; /* Aumentar el ancho para un diseño más cómodo */
+    box-sizing: border-box;
+    z-index: 1; /* Asegúrate de que el formulario esté encima de la imagen difuminada */
+}
+
+.login-container h1 {
+    margin-top: 0;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container .error {
+    color: #e74c3c;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Campo de entrada */
+.form-group input {
+    width: 100%;
+    padding: 15px 0; /* Padding vertical para ajustar el tamaño del campo */
+    padding-left: 40px; /* Espacio para el ícono de usuario */
+    border: none;
+    border-bottom: 2px solid #ddd;
+    border-radius: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-bottom-color: #007BFF;
+    outline: none;
+}
+
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 45px; /* Ajuste para el ícono */
+    font-size: 14px;
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translateY(-50%);
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 40px; /* Ajuste para el ícono */
+    font-size: 12px;
+    color: #007BFF;
+}
+
+.form-group input::placeholder {
+    color: transparent; /* Oculta el texto del placeholder */
+}
+
+.form-group i {
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    color: #aaa;
+    transform: translateY(-50%);
+}
+
+.form-group .fa-user {
+    left: 10px;
+}
+
+.form-group .fa-lock {
+    left: 10px;
+}
+
+.form-group #togglePassword {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    font-size: 18px;
+    color: #007BFF;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1; /* Asegúrate de que esté sobre la línea */
+}
+
+.login-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}

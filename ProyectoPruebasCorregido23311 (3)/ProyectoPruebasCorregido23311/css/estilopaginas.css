@@ -1,0 +1,384 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    display: flex;
+}
+
+/* Header Styles */
+.header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: calc(100% - 12%);
+    top: 0;
+    left: 15%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    justify-content: flex-end;
+}
+
+.header .page-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.header .user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.header .username {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.header .logout {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.header .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header .avatar img {
+    width: 100%;
+    height: auto;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 15%;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .avatar {
+    margin-bottom: 20px;
+}
+
+.sidebar .avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.sidebar h1 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.sidebar .menu-item {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.sidebar .menu-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar .menu-item a:hover {
+    background-color: #007BFF;
+}
+
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: auto; 
+}
+
+.main-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Stats Styles */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.stat-box {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 50px;
+}
+
+.stat-box i {
+    font-size: 40px;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.stat-box div {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Modal Styles */
+#logoutModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    background-color: #007BFF;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilo para la tabla */
+
+.content {
+    padding-left: 5%; 
+    box-sizing: border-box;
+}
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 5px;
+    font-size: 15px;
+    text-align: center;
+    max-width: 100%;
+    margin: 20px 0;
+    table-layout: auto;
+}
+
+.user-table th, .user-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+.user-table th {
+    background-color: #333;
+    color: #fff;
+    letter-spacing: 0.05em;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.user-table tr:hover {
+    background-color: #ddd;
+}
+
+.table-wrapper {
+    overflow-x: auto; 
+    max-width: calc(100% - 12%); 
+    padding-right: 5%;
+}
+
+/* Ajuste de tamaño de fuente y padding para dispositivos pequeños */
+@media (max-width: 768px) {
+    .user-table {
+        font-size: 8px; 
+    }
+    .user-table th, .user-table td {
+        padding: 8px 10px;
+    }
+}
+
+
+/* Estilo para los botones de acción */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.action-buttons button {
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-activate {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-activate:hover {
+    background-color: #218838;
+}
+
+.btn-deactivate {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-deactivate:hover {
+    background-color: #c82333;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-add-product {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-add-product:hover {
+    background-color: #0056b3;
+}
+
+.btn-invoice {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-invoice:hover {
+    background-color: #0056b3;
+}
+
+.btn-activate i, .btn-deactivate i, .btn-edit i, .btn-add-product i, .btn-invoice i {
+    margin-right: 5px;
+}
+
+/* Estilos Responsivos */
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .header {
+        width: calc(100% - 200px);
+        left: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    .user-table {
+        font-size: 8px; 
+    }
+}
+
+/* Para pantallas menores de 480px */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .header {
+        width: 100%;
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .user-table {
+        font-size: 6px; /* Reduce aún más el tamaño de la fuente */
+    }
+}
